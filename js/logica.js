@@ -38,3 +38,39 @@ else {
     // let valorDeLaCuota= cotizador.valorDePoliza(mts,zonaViv,tipoViv)
     // valorCuota.innertext = valorDeLaCuota
 }
+
+// let carrito = []
+
+// function verCarrito() {
+//     // if (verCarrito.length === 0){
+//     //     console.warn("El carrito esta vacio.")
+//     // } 
+
+//     //operador logico and &&
+//    let mensaje = carrito.length === 0 && "El carrito esta vacio."
+//    console.warn(mensaje)
+// }
+
+// // const usuario1 = {
+// //     nombre: "John Doe",
+// //     edad: 14
+// // }
+
+// // const usuario2 = null
+
+// // console.log{usuario1 || "El usuario no existe"}
+
+// // // {    nombre: "John Doe",  edad: 14 }
+
+// // console.log{usuario2 || "El usuario no existe"}
+
+// // //"El usuario no existe"
+
+// function recuperarCarrito() {
+//     carrito = JSON.parse(localStorage.getItem("carrito")) || ["ERROR en carrito"]
+//     console.log(carrito)
+//     for (item of carrito){
+//         console.log(item)
+//         //cargar en el HTML
+//     }
+// }
