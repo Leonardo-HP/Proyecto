@@ -20,8 +20,12 @@ const cargoTiposDeVivienda = ()=> {
         return optionTV
 }
 
-const cotizarSeguroVivienda = ()=> {
-    if (metros2.value !== ""){
+
+const faltanCargarDatos = ()=>{
+    return (isNaN(parseInt(metros2.value))|| selectTipoVivienda.value.trim() == "" || selectZonaVivienda.value.trim()=="")
+}
+
+const muestroCotizacion = ()=> {
     let mts = metros2.value
     let zonaViv = selectZonaVivienda.value
     let tipoViv = selectTipoVivienda.value
@@ -29,15 +33,41 @@ const cotizarSeguroVivienda = ()=> {
     valorDeLaCuota = valorDeLaCuota.toFixed(2)
     valorCuota.innerText = `$ ${valorDeLaCuota}`
     
+    
 }
-else {
-    alert("Complete todos los datos solicitados")
+
+const cotizarSeguroVivienda = ()=> {
+
+faltanCargarDatos() ? alert("Complete todos los datos solicitados") : muestroCotizacion()
+
+
+
+
+
+
+
+
+//     if (faltanCargarDatos()){
+//         alert("Complete todos los datos solicitados")
+//     }
+    
+// else {
+//     let mts = metros2.value
+//     let zonaViv = selectZonaVivienda.value
+//     let tipoViv = selectTipoVivienda.value
+//     let valorDeLaCuota = cotizador.valorDePoliza(mts, zonaViv, tipoViv)
+//     valorDeLaCuota = valorDeLaCuota.toFixed(2)
+//     valorCuota.innerText = `$ ${valorDeLaCuota}`
+    
+// }
+
+   
 }
 
     // este es el metodo expandido sin simplificar
     // let valorDeLaCuota= cotizador.valorDePoliza(mts,zonaViv,tipoViv)
     // valorCuota.innertext = valorDeLaCuota
-}
+
 
 // let carrito = []
 
