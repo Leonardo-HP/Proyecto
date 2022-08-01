@@ -38,9 +38,20 @@ const muestroCotizacion = ()=> {
 
 const cotizarSeguroVivienda = ()=> {
 
-faltanCargarDatos() ? alert("Complete todos los datos solicitados") : muestroCotizacion()
+faltanCargarDatos() ?  swa() : muestroCotizacion()
+}
 
 
+
+
+const swa = ()=> {
+    Swal.fire({
+        title: 'Complete todos los datos solicitados',
+        text: '',
+        icon: 'info',
+        confirmButtonText: 'Cool'
+      })
+    }
 
 
 
@@ -62,7 +73,7 @@ faltanCargarDatos() ? alert("Complete todos los datos solicitados") : muestroCot
 // }
 
    
-}
+
 
     // este es el metodo expandido sin simplificar
     // let valorDeLaCuota= cotizador.valorDePoliza(mts,zonaViv,tipoViv)
